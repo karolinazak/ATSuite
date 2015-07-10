@@ -1,0 +1,13 @@
+config driver = "firefox"
+open "http://www.isolution.pl"
+
+// contact link
+find xpath "//*[@id='nav_1']/li[8]/a"
+click
+// only if you want to see contact page
+// wait 1000
+
+verify "That isolution address is correct"
+"//*[@id='kontakt']/div[1]/table/tbody/tr[2]/td[1]" must be equal "ul. Eustachego Tyszkiewicza 22"
+end
+
